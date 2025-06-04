@@ -1,0 +1,4 @@
+apiVersion: v2
+name: nginx-ingress-helm
+description: A Helm chart for deploying Nginx + Ingress + MetalLB
+version: 0.1.0

@@ -1,4 +1,3 @@
-# metallb-config.yaml
 apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
 metadata:
@@ -6,7 +5,7 @@ metadata:
   name: my-ip-pool
 spec:
   addresses:
-    - 172.25.101.190/32
+    - {{ .Values.metallb.ipAddress }}/32
 ---
 apiVersion: metallb.io/v1beta1
 kind: L2Advertisement

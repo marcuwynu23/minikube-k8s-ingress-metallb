@@ -5,9 +5,9 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
-  ingressClassName: nginx # <-- ADD THIS!
+  ingressClassName: nginx
   rules:
-    - host: nginx.local
+    - host: {{.Values.ingress.host}}
       http:
         paths:
           - path: /
@@ -16,4 +16,4 @@ spec:
               service:
                 name: nginx-service
                 port:
-                  number: 80
+                  number: {{.Values.service.port}}
